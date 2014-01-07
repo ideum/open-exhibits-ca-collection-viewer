@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cml>
+
+<Button dispatch="down:fontSize" hit="font-hit" initial="font-up" down="font-down" up="font-up" out="font-up" side="info" visible="false">
+	<Container id="font-up">
+		<SWF alpha="1" x="0" y="-6" color="0xFFFFFF" scale="1.6" classRef="org.openexhibits.assets.FontSize" />
+	</Container>
+	<Container id="font-down">
+		<SWF alpha="1" x="0" y="-6" color="0xCCCCCC" scale="1.6" classRef="org.openexhibits.assets.FontSize" />
+	</Container>	
+	<Container id="font-hit">
+		<Graphic shape="circle" radius="24" color="0x666666" alpha="0" />
+	</Container>
+</Button>
+
+</cml>

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cml gml="library/gml/my_gestures.gml" css="library/css/my_styles_modules.css"  simulator="false">
+
+	<LibraryKit>
+		<Library type="swf" src="library/swfs/openexhibits_assets.swf" />	
+	</LibraryKit>
+	
+	<TouchContainer gestureReleaseInertia="true" mouseChildren="true" width="800" height="650">
+	
+		<Graphic shape="rectangle" width="800" height="650" color="fill" fill="0x000000" lineColor="0xffffff" lineStroke="1"/>
+	
+		<TouchContainer visible="true" targetParent="true" mouseChildren="false">
+			<Frame frameThickness="1" frameColor="0xffffff"/>
+		</TouchContainer>
+	
+		<ScrollPane paneWidth="400" paneHeight="600" mouseChildren="true" scrollThickness="5">
+			<Image id="img1" src="library/assets/1024px-AgamaSinaita01_ST_10.jpg" scale=".35"/>
+			
+			<TouchContainer nativeTransform="false">
+				<GestureList>
+					<Gesture ref="n-drag" gestureOn="true"/>
+					<Gesture ref="n-scale" gestureOn="true"/>
+				</GestureList>
+			</TouchContainer>
+		</ScrollPane>
+		
+		<Text multiline="true" color="0xffffff" wordWrap="true" width="370" height="600" x="415" y="10" text="Passerby were amazed by unusual amounts of blood. Passerby were amazed by unusual amounts of blood. Passerby were amazed by unusual amounts of blood. Passerby were amazed by unusual amounts of blood. Passerby were amazed by unusual amounts of blood. Passerby were amazed by unusual amounts of blood. Passerby were amazed by unusual amounts of blood. Passerby were amazed by unusual amounts of blood. Passerby were amazed by unusual amounts of blood. Passerby were amazed by unusual amounts of blood."/>
+		
+		<!--TouchContainer id="img1-info" class="info_container" visible="false" targetParent="true" mouseChildren="false" >
+			<Graphic id="info-bg" class="info_bg" shape="rectangle"/>
+			<Text name="title" id="title" fontSize="10" border="false" class="info_title" selectable="false" text="Chrome Alum Crystals"/>				
+			<Text border="false" multiline="true" wordWrap="true" color="0xffffff" selectable="false" width="100" height="500" fontSize="15" text="This is a photo of chrome alum crystals in a chrome alum solution, at 20x magnification. Taken with my Canon SX110 IS, through a Novex stereo microscope with lighting from underneath. The crystals are grown from a saturated solution and are no more than 1 mm in diameter. Created myself, Paul, from www.paulslab.com"/>		
+			
+		</TouchContainer-->
+		
+		<GestureList>
+			<Gesture ref="n-drag-inertia" gestureOn="true"/>
+			<Gesture ref="n-scale" gestureOn="true"/>
+			<Gesture ref="n-rotate" gestureOn="true"/>
+		</GestureList>
+		
+	</TouchContainer>	
+
+	<DebugKit displayOn="true" displayAlwaysOn="false" displayRadius="300">
+		<DebugLayer type="point_shapes" displayOn="true"/>
+		<DebugLayer type="cluster_circle" displayOn="true"/>
+		<DebugLayer type="cluster_box" displayOn="true"/>
+		<DebugLayer type="cluster_center" displayOn="true"/>
+		<DebugLayer type="cluster_web" displayOn="true"/>
+		<DebugLayer type="cluster_rotation" displayOn="true"/>
+	</DebugKit>
+	
+</cml>

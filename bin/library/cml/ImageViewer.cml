@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cml gml="library/gml/my_gestures.gml" css="library/css/module/my_styles_modules.css"  simulator="false">
+	
+<ImageViewer id="iv" gestureReleaseInertia="true" image="#img1" front="#front" menu="#menu" back="#back1,#back2" background="#info-bg" timeout="30" fadeoutDuration="5" dropShadow="true">
+
+	<TouchContainer id="front" visible="true" targetParent="true" mouseChildren="false">
+		<Image id="img1" src="{image_content}" resample="true" width="1000" height="0" scale=".5"/>
+	</TouchContainer>
+	
+	<TouchContainer id="back1" targetParent="true" mouseChildren="false" clusterBubbling="false" visible="false">
+		<Graphic id="info-bg" class="info_bg" shape="rectangle" />
+		<Text id="title" class="info_title" gridFitType="none" text="{name}" font="OpenSansBold" />		
+	</TouchContainer>
+	
+	<ScrollPane id="back2" visible="false" width="600" height="400" paneStroke="0" scrollThickness="20" 
+	mouseChildren="true" targetParent="true" clusterBubbling="false" scrollOnPane="true" scaleOnPane="false" multiFingerScroll="true">
+		<ScrollBar buttonFill="0x333333" fill="0x555555" railShape="roundRectangle" thumbFill="0x303030" cornerHeight="15" cornerWidth="15" buttonVisible="false" />
+		<Text id="description" gridFitType="none" scrollable="false" paddingLeft="20" paddingRight="20" paddingBottom="10" class="info_description" multiline="true" selectable="false" text="{work_description}" font="OpenSansBold" textBitmap="false" />
+		<GestureList>
+			<Gesture ref="n-drag" gestureOn="true" />
+		</GestureList>
+	</ScrollPane>	
+	
+	<Menu id="menu" class="menu_container" alpha="0.6" position="bottom" paddingLeft="20" paddingBottom="20" paddingRight="20" autoHide="true" visible="false" >
+		<Include src="library/cml/buttons/infoFlipButton.cml"/>
+		<Include src="library/cml/buttons/fontSizeButton.cml"/>
+		<Include src="library/cml/buttons/closeButton.cml"/>
+	</Menu>
+	
+	<Gesture ref="n-drag-inertia"/>
+	<Gesture ref="n-rotate-inertia"/>
+	<Gesture ref="n-scale"/>
+	
+</ImageViewer>	
+
+	
+</cml>

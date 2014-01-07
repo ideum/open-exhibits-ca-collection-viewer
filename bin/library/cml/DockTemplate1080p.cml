@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<cml>
+
+<Dock class="search" position="bottom" x="0" searchFields="organism,organismsubtype,organismlocation" returnFields="work_description" 
+searchTermFilters="true" y="800" handle="handle" leftHandle="leftHandle" rightHandle="rightHandle" width="1920" height="280" 
+initializeOpen="false" useSideHandles="true" background="background" maxClones="20" nextArrow="forward-btn" previousArrow="back-btn" resultsPerPage="500">
+	<Graphic id="background" color="0x14241D" width="1920" height="280" shape="rectangle" lineStroke="2"/>
+	
+	<!-- Pagination buttons -->
+	<Container id="forward-btn" width="60" height="60" x="0" y="30">
+		<Graphic alpha="1" shape="circle" radius="20" lineStroke="1.5" color="0x282E33" />	
+		<SWF alpha="1" x="32" y="10" color="0xFFFFFF" scale="1.6" rotation="90" classRef="org.openexhibits.assets.ArrowFill" />
+	</Container>
+	
+	<Container id="back-btn" width="60" height="60" x="0" y="30">
+		<Graphic alpha="1" shape="circle" radius="20" lineStroke="1.5" color="0x282E33" />	
+		<SWF alpha="1" x="8" y="29" color="0xFFFFFF" scale="1.6" rotation="-90" classRef="org.openexhibits.assets.ArrowFill" />
+	</Container>
+
+	<!--Handles-->
+	<TouchContainer id="handle" height="60">
+		<Graphic shape="roundRectangleComplex" lineStroke="2" width="1920" fill="color" color="0x14241D" topLeftRadius="20" topRightRadius="20" height="60"/>
+		<SWF alpha="1" x="25" y="20" color="0xFFFFFF" scale="1.6" classRef="org.openexhibits.assets.ArrowOutline" />		
+		<SWF alpha="1" x="1880" y="20" color="0xFFFFFF" scale="1.6" classRef="org.openexhibits.assets.ArrowOutline" />		
+		<Text y="5" selectable="false" text="BROWSE" font="OpenSansLight" fontSize="30" width="1920" autoSize="center" textColor="0xffffff" cacheAsBitmap="true" />
+	</TouchContainer>
+	
+	<TouchContainer id="leftHandle" height="370" width="60">
+		<Graphic shape="roundRectangleComplex" lineStroke="2" width="60" color="0x14241D" topLeftRadius="20" height="370"/>
+		<SWF alpha="1" x="40" y="40" color="0xFFFFFF" scale="1.6" rotation="180" classRef="org.openexhibits.assets.ArrowOutline" />
+		<Text x="17" y="55" selectable="false" text="DOCK" leading="-5" font="OpenSansLight" fontSize="30" height="300" width="30" multiline="true" wordWrap="true" textColor="0xffffff" cacheAsBitmap="true" />		
+	</TouchContainer>	
+	
+	<TouchContainer id="rightHandle" height="370" width="60">
+		<Graphic shape="roundRectangleComplex" lineStroke="2" width="60" color="0x14241D" topRightRadius="20" height="370"/>
+		<SWF alpha="1" x="40" y="40" color="0xFFFFFF" scale="1.6" rotation="180" classRef="org.openexhibits.assets.ArrowOutline" />
+		<Text x="17" y="55" selectable="false" text="DOCK" leading="-5" font="OpenSansLight" fontSize="30" height="300" width="30" multiline="true" wordWrap="true" textColor="0xffffff" cacheAsBitmap="true" />		
+	</TouchContainer>	
+
+	<!--Contents-->
+		
+	<Container class="dials">
+		<!--Dial 1-->
+		<Container id="dial-1-container" width="275">
+			
+			<Graphic y="1" shape="rectangle" width="275" height="35" fill="color" color="0x14241D" lineStroke="1" lineColor="0x303030"/>
+			<Text x="22" y="1" selectable="false" text="Phylum" font="OpenSansBold" fontSize="22" border="false" borderColor="0xFFFFFF" autoSize="left" textAlign="left" textColor="0xffffff"/>
+			
+			<Graphic y="36" shape="rectangle" width="275" height="230" fill="color" color="0x14241D" lineStroke="1" lineColor="0x303030"/>
+			<Dial id="dial-1" class="dial-bot" x="2" y="40" height="180" width="270" continuous="false" textColor="0xcccccc" selectedTextColor="0x14241D" gradientColors="0x14241D, 0xDDDDDD, 0x14241D" leftTriangleColor="0x14241D" rightTriangleColor="0x14241D" leftTriangleScale=".75" rightTriangleScale=".75"
+				text="Invertebrates,Plants,Vertebrates"/>
+		</Container>
+		
+			<!--Dial 2-->
+		<Container id="dial-2-container" width="275">
+			
+			<Graphic y="1" shape="rectangle" width="275" height="35" fill="color" color="0x14241D" lineStroke="1" lineColor="0x303030"/>
+			<Text x="22" y="1"  selectable="false" text="Class" font="OpenSansBold" fontSize="22" border="false" borderColor="0xFFFFFF" autoSize="left" textAlign="left" textColor="0xffffff"/>
+			
+			<Graphic y="36" shape="rectangle" width="275" height="230" fill="color" color="0x14241D" lineStroke="1" lineColor="0x303030"/>
+			<Dial id="dial-2" class="dial-bot" x="2" y="40" height="180" width="270" continuous="false" textColor="0xcccccc" filterDial="dial-1" selectedTextColor="0x14241D" gradientColors="0x14241D, 0xDDDDDD, 0x14241D" leftTriangleColor="0x14241D" rightTriangleColor="0x14241D" leftTriangleScale=".75" rightTriangleScale=".75"
+				text="Invertebrates:Arachnids,
+					Vertebrates:Birds,
+					Plants:Flowers,
+					Invertebrates:Insects,
+					Vertebrates:Mammals,
+					Vertebrates:Reptiles,
+					Plants:Trees"/>
+		</Container>
+		
+			<!--Dial 3-->
+		<Container id="dial-3-container" width="275">
+			<Graphic y="1" shape="rectangle" width="275" height="35" fill="color" color="0x14241D" lineStroke="1" lineColor="0x303030"/>
+			<Text x="22" y="1" selectable="false" text="Location" font="OpenSansBold" fontSize="22" border="false" borderColor="0xFFFFFF" autoSize="left" textAlign="left" textColor="0xffffff"/>
+			
+			<Graphic y="36" shape="rectangle" width="275" height="230" fill="color" color="0x14241D" lineStroke="1" lineColor="0x303030"/>
+			<Dial id="dial-3" class="dial-bot" x="2" y="40" height="180" width="270" continuous="false" textColor="0xcccccc" filterDial="dial-2" selectedTextColor="0x14241D" gradientColors="0x14241D, 0xDDDDDD, 0x14241D" leftTriangleColor="0x14241D" rightTriangleColor="0x14241D" leftTriangleScale=".75" rightTriangleScale=".75"
+				text="Birds:Flowers:Insects:Mammals:Reptiles:Trees:Africa,
+					Arachnids:Birds:Flowers:Insects:Mammals:Asia,
+					Arachnids:Birds:Insects:Mammals:Reptiles:Australia,
+					Arachnids:Birds:Flowers:Insects:Mammals:Europe,
+					North America,
+					Arachnids:Flowers:Reptiles:South America"/>
+		</Container>
+		
+		<Container id="album-container" width="975" x="-1">
+			<Graphic y="1" shape="rectangle" width="975" height="280" fill="color" color="0x14241D" lineStroke="1" lineColor="0x303030"/>
+			<Text id="result_text" selectable="false" y="1" text="" font="OpenSansBold" fontSize="22" width="945" autoSize="center" textColor="0xffffff"/>
+			<MenuAlbum x="15" id="menu1" y="41" width="945" loop="false" margin="8" snapping="false" centerContent="false" backgroundColor="0x14241D"/>	
+			<Text id="title-text"  selectable="false" class="dock-text" x="20" y="20" text="Encyclopedia of Life" font="OpenSansBold" fontSize="34" border="false" borderColor="0xFFFFFF" height="1000" width="970" autoSize="left" textColor="0xffffff"/>
+			<Text id="instr-text"  selectable="false" class="dock-text" x="20" y="80" text="Use the dials to make a selection. Tap on the thumbnails to load them onto the table." font="OpenSansBold" fontSize="25" border="false" borderColor="0xFFFFFF" height="500" width="700" wordWrap="true" multiline="true" autoSize="left" textColor="0xffffff"/>				
+			
+			<Container  x="50" y="25" id="info-pane" visible="false">
+				<Graphic y="1" shape="roundRectangle" cornerWidth="15" cornerHeight="15" width="870" height="173" fill="color" color="0x14241D" lineStroke="1.5" alpha="1" lineColor="0x303030">
+					<Filter ref="DropShadow" angle="135" distance="8" alpha="0.75" />
+				</Graphic>
+				
+				<ScrollPane id="info-scroll" y="12.5" visible="true" width="845" height="148" paneStroke="0" paneStrokeColor="0xff0000" scrollThickness="20" mouseChildren="true" 
+				targetParent="false" clusterBubbling="true" nativeTransform="true">
+					<ScrollBar buttonFill="0x333333" fill="0x303030" thumbFill="0x555555" railShape="roundRectangle" cornerHeight="15" cornerWidth="15" buttonVisible="false" y="25" scaleY=".8"/>
+					<Container x="11" y="3" width="837" height="255">
+						<Text text="Encyclopedia of Life" width="815" color="0xFFFFFF" y="3" selectable="false" font="OpenSansBold" fontSize="24" autoSize="left"/>
+						<Text  selectable="false" id="info_text"  
+							font="OpenSansRegular" fontSize="18" border="false" borderColor="0xFFFFFF" width="837" 
+							wordWrap="true" multiline="true" autoSize="left" textColor="0xffffff" y="53">
+							
+							<p>Through the Encyclopedia of Life, Flickr users provide images and videos of organisms for the Encyclopedia of Life web site. This is a small selection of photos available on the Encyclopedia of Life Flickr Group.</p>
+							
+							<p>Ideally, images for EOL should be in focus, high resolution pictures of live organisms in their natural habitat. However, pictures of cultivated plants, captive animals, or dead specimens are ok, especially if the organism is rarely encountered in the wild. However, please be sure to indicate clearly in the image caption if your photograph is of a captive, cultivated, or dead specimen, and always include location information for organisms photographed in the wild.</p>
+							
+						</Text>
+					</Container>
+				</ScrollPane>
+			</Container>			
+			
+			<Button id="info-btn" x="942" y="8" scale="0.5" class="info_btn" dispatch="toggle:info" toggle="up">
+				<Container id="info-up">
+					<Graphic alpha="1" shape="circle" radius="24" lineStroke="3" color="0x14241D" />	
+					<SWF alpha="1" x="18" y="9.5" color="0xFFFFFF" scale="1.6" classRef="org.openexhibits.assets.Info" />
+				</Container>
+				<Container id="info-down">
+					<Graphic id="info-close" shape="circle" radius="24" lineStroke="3" color="0x14241D" />	
+					<SWF alpha="1" x="15" y="15" color="0xFFFFFF" scale="1.6" classRef="org.openexhibits.assets.Close" />
+				</Container>			
+			</Button>			
+			
+		</Container>
+		
+		<Layout classRef="ListLayout" useMargins="true" marginX="0"/>
+		
+	</Container>
+</Dock>
+
+</cml>
