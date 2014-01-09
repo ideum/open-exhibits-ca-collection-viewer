@@ -15,7 +15,7 @@ package
 	[SWF(width = "1920", height = "1080", backgroundColor = "0xcccccc", frameRate = "30")]
 	
 	/**
-	 * Collective Access Collection Viewer
+	 * Maxwell Database Collection Viewer
 	 * @author Ideum
 	 */
 	public class Main extends GestureWorks
@@ -30,7 +30,7 @@ package
 			cml = "library/cml/CollectionViewer.cml";
 			gml = "library/gml/my_gestures.gml";
 			fullscreen = true;
-			//CMLParser.debug = true;
+		//	CMLParser.debug = true;
 			CMLParser.instance.addEventListener(CMLParser.COMPLETE, cmlInit);
 		}
 		

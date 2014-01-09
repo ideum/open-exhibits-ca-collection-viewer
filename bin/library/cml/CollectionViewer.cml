@@ -5,6 +5,14 @@
 	<Library type="swf" src="library/swfs/openexhibits_assets.swf" />	
 </LibraryKit>
 
+<!-- Top Placeholders -->
+<Container>
+	<Graphic class="bg-rect-top" x="76" />
+	<Graphic class="bg-rect-top" x="443" />
+	<Graphic class="bg-rect-top" x="810" />
+	<Graphic class="bg-rect-top" x="1177" />
+	<Graphic class="bg-rect-top" x="1544" />
+</Container>
 
 <!-- Bottom Placeholders -->
 <Container>
@@ -15,6 +23,13 @@
 	<Graphic class="bg-rect-bot" x="1544" />
 </Container>
 
+<!--Top container with transparent overlay to apply layouts on tap events-->
+<TouchContainer id="t_container">
+	<Graphic shape="rectangle" width="1920" height="540" alpha="0"/>	
+	<GestureList>
+		<Gesture ref="n-tap" gestureOn="true"/>
+	</GestureList>	
+</TouchContainer>
 
 <!--Bottom container with transparent overlay to apply layouts on tap events-->
 <TouchContainer id="b_container" width="1920" height="540">	
@@ -25,13 +40,13 @@
 </TouchContainer>
 
 
-<CollectionViewer amountToShow="5" autoShuffle="true" bottomContainer="b_container" gateway="http://184.73.235.134/providence/amfphp-2.1/Amfphp/">
+<CollectionViewer amountToShow="5" autoShuffle="true" topContainer="t_container" bottomContainer="b_container" gateway="http://184.73.235.134/providence/amfphp-2.1/Amfphp/">
 	
 	<Include src="library/cml/ImageViewer.cml"/>	
 	<Include src="library/cml/DockTemplate1080p.cml"/>
 	
 </CollectionViewer>	
 
-<StageKit displayFrameRate="true" fullscreen="true" escapeSprite="true" />
+<StageKit displayFrameRate="true" fullscreen="true" escapeSprite="false" />
 
 </cml>
