@@ -49,7 +49,7 @@ initializeOpen="false" useSideHandles="true" background="background" maxClones="
 			
 			<Graphic y="36" shape="rectangle" width="275" height="230" fill="color" color="0x14241D" lineStroke="1" lineColor="0x303030"/>
 			<Dial id="dial-1" class="dial-bot" x="2" y="40" height="180" width="270" continuous="false" textColor="0xcccccc" selectedTextColor="0x14241D" gradientColors="0x14241D, 0xDDDDDD, 0x14241D" leftTriangleColor="0x14241D" rightTriangleColor="0x14241D" leftTriangleScale=".75" rightTriangleScale=".75"
-				text="New Mexico,Arizona,Utah,Colorado"/>
+				text="Arizona,Colorado,New Mexico,Utah"/>
 		</Container>
 		
 			<!--Dial 2-->
@@ -60,9 +60,7 @@ initializeOpen="false" useSideHandles="true" background="background" maxClones="
 			
 			<Graphic y="36" shape="rectangle" width="275" height="230" fill="color" color="0x14241D" lineStroke="1" lineColor="0x303030"/>
 			<Dial id="dial-2" class="dial-bot" x="2" y="40" height="180" width="270" continuous="false" textColor="0xcccccc" filterDial="dial-1" selectedTextColor="0x14241D" gradientColors="0x14241D, 0xDDDDDD, 0x14241D" leftTriangleColor="0x14241D" rightTriangleColor="0x14241D" leftTriangleScale=".75" rightTriangleScale=".75"
-				text="Landscape,
-					Nature,
-					Art"/>
+				text="Art,Landscape,Nature"/>
 		</Container>
 		
 			<!--Dial 3-->
@@ -72,14 +70,14 @@ initializeOpen="false" useSideHandles="true" background="background" maxClones="
 			
 			<Graphic y="36" shape="rectangle" width="275" height="230" fill="color" color="0x14241D" lineStroke="1" lineColor="0x303030"/>
 			<Dial id="dial-3" class="dial-bot" x="2" y="40" height="180" width="270" continuous="false" textColor="0xcccccc" filterDial="dial-2" selectedTextColor="0x14241D" gradientColors="0x14241D, 0xDDDDDD, 0x14241D" leftTriangleColor="0x14241D" rightTriangleColor="0x14241D" leftTriangleScale=".75" rightTriangleScale=".75"
-				text="Mountains,
-					Rivers,
-					Animals,
-					Architecture,
-					Paintings,
-					Plants,
-					Sculptures,
-					Other Features"/>
+				text="Arizona|Nature:Colorado|Nature:New Mexico|Nature:Utah|Nature:Animals,
+					Arizona|Nature:Colorado|Nature:New Mexico|Nature:Utah|Nature:Plants,
+					Arizona|Art:Colorado|Art:New Mexico|Art:Utah|Art:Architecture,
+					Arizona|Art:New Mexico|Art:Paintings,					
+					Arizona|Art:Colorado|Art:New Mexico|Art:Utah|Art:Sculptures,
+					Arizona|Landscape:New Mexico|Landscape:Utah|Landscape:Mountains,
+					Arizona|Landscape:Colorado|Landscape:New Mexico|Landscape:Utah|Landscape:Rivers,
+					Arizona|Landscape:Colorado|Landscape:New Mexico|Landscape:Utah|Landscape:Other Features"/>
 		</Container>
 		
 		<Container id="album-container" width="975" x="-1">
