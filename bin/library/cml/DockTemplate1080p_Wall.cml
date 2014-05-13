@@ -4,7 +4,7 @@
 
 <Dock class="search" position="bottom" x="0" searchFields="organism,organismsubtype,organismlocation" returnFields="work_description" 
 searchTermFilters="true" y="800" handle="handle" leftHandle="leftHandle" rightHandle="rightHandle" width="1920" height="280" 
-initializeOpen="false" useSideHandles="true" background="background" maxClones="10" nextArrow="forward-btn" previousArrow="back-btn" resultsPerPage="500">
+initializeOpen="false" useSideHandles="true" background="background" maxClones="30" nextArrow="forward-btn" previousArrow="back-btn" resultsPerPage="500">
 	<Graphic id="background" color="0x14241D" width="1920" height="280" shape="rectangle" lineStroke="0"/>
 	
 	<!-- Pagination buttons -->
