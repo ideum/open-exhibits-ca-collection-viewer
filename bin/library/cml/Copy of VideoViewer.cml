@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cml gml="library/gml/my_gestures.gml" css="library/css/module/my_styles_modules.css"  simulator="false">
+
+<VideoViewer id="vv" gestureReleaseInertia="true" video="#vid1" front="#front" menu="#menu" back="#back1,#back2" background="#info-bg" frame="#frame" timeout="30" fadeoutDuration="5" dropShadow="true" autoTextLayout="true">
+       
+        <TouchContainer id="front" visible="true" targetParent="true" mouseChildren="false">
+                <Video id="vid1" src="{image_content}" autoplay="true" width="1000" height="0" scale=".5"/>
+        </TouchContainer>
+       
+		<TouchContainer id="back1" targetParent="true" mouseChildren="false" clusterBubbling="false" visible="false">
+                <Graphic id="info-bg" color="0x19677F" alpha="0.6" lineStroke="0" class="info_bg" shape="rectangle"/>               
+				<Text id="title" class="info_title" gridFitType="none" text="{name}" font="OpenSansBold" />
+        </TouchContainer>
+ 
+        <TouchContainer id="back2" class="frame_container" visible="false" targetParent="true" mouseChildren="false">
+                <Frame id="frame" frameColor="0x999999" frameAlpha="0.3" frameThickness="30" frameShape="rectangle" class="frame"/>
+        </TouchContainer>
+       
+<!-- Here is where the entire menu is structured. We used "include" files to style each of our buttons individually rather than have all the mark-up here. -->
+        <Menu id="menu" class="menu_container" x="0" y="0" alpha="0.6" position="bottom" paddingLeft="30" paddingBottom="-50" paddingRight="20" autoHide="true" visible="false">
+                <Include src="library/cml/buttons/infoButton.cml"/>
+                <Include src="library/cml/buttons/playButton.cml"/>
+                <Include src="library/cml/buttons/pauseButton.cml"/>
+                <Include src="library/cml/buttons/closeButton.cml"/>
+        </Menu>
+        <GestureList>
+                <Gesture ref="n-drag" gestureOn="true"/>
+                <Gesture ref="n-scale" gestureOn="true"/>
+                <Gesture ref="n-rotate" gestureOn="true"/>
+                <!--<Gesture ref="tap" gestureOn="true"/> -->
+        </GestureList>
+</VideoViewer>
+
+</cml>

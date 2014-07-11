@@ -26,11 +26,13 @@ package
 		
 		public function Main() 
 		{
-			super();	
+			super();
 			cml = "library/cml/CollectionViewer.cml";
 			gml = "library/gml/my_gestures.gml";
 			fullscreen = true;
-		//	CMLParser.debug = true;
+			simulator = true;
+			
+			//CMLParser.debug = true;
 			CMLParser.instance.addEventListener(CMLParser.COMPLETE, cmlInit);
 		}
 		
