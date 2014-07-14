@@ -1,10 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<cml gml="library/gml/my_gestures.gml" css="library/css/module/my_styles_modules.css"  simulator="false">
+<cml gml="library/gml/my_gestures.gml" css="library/css/module/my_styles_modules.css" simulator="false">
 
-<!-- <VideoViewer id="vv" gestureReleaseInertia="true" video="#vid1" front="#front" back="#back1,back2" menu="#menu" background="#info-bg" timeout="30" fadeoutDuration="5" dropShadow="true" autoTextLayout="true"> -->
-<VideoViewer id="vv" gestureReleaseInertia="true" video="#vid1" front="#front" back="#back1,back2" menu="#menu" background="#info-bg" dropShadow="true" autoTextLayout="true">
+<VideoViewer id="vv" gestureReleaseInertia="true" video="#vid1" front="#front" menu="#menu" back="#back1,#back2" background="#info-bg" timeout="999" fadeoutDuration="5" dropShadow="true" autoTextLayout="true">
+	
+	<!-- holds the URL for the static visual image to be used in the Dock preview -->
+	<Text id="staticVisualUrl" text="{static_visual_content}" visible="false" />
+	
 	<TouchContainer id="front" visible="true" targetParent="true" mouseChildren="false">
-        <Video id="vid1" autoplay="true" src="{image_content}" x="1" y="1" width="480" height="270" scale="1.0" alpha="1" visible="true" />
+		<Video id="vid1" src="{primary_content}" smoothing="true"  autoplay="true" />
     </TouchContainer>
 	
 	<TouchContainer id="back1" targetParent="true" mouseChildren="false" clusterBubbling="false" visible="false">
@@ -12,27 +15,25 @@
 		<Text id="title" class="info_title" gridFitType="none" text="{name}" font="OpenSansBold" />		
 	</TouchContainer>
 	
-	<ScrollPane id="back2" visible="false" width="600" height="400" paneStroke="0" scrollThickness="20" mouseChildren="true" targetParent="true" clusterBubbling="false">
+	<ScrollPane id="back2" visible="false" paneStroke="0" scrollThickness="20" mouseChildren="true" targetParent="true" clusterBubbling="false">
 		<ScrollBar buttonFill="0x333333" fill="0x555555" railShape="roundRectangle" thumbFill="0x303030" cornerHeight="15" cornerWidth="15" buttonVisible="false" />
 		<Text id="description" gridFitType="none" paddingLeft="20" paddingRight="20" paddingBottom="10" class="info_description" multiline="true" selectable="false" text="{work_description}" font="OpenSansBold" />
 		<GestureList>
-			<Gesture ref="n-drag" />
+			<Gesture ref="n-drag" gestureOn="true"/>
 		</GestureList>
 	</ScrollPane>	
 	
-	<!-- MENU -->
-	<!-- <Menu id ="menu" class="menu_container" x="0" y="0" alpha="0.75" position="bottomRight" autohide="true" paddingLeft="0" paddingBottom="10" paddingRight="10" visible="false"> -->
-		<Menu id="menu" class="menu_container" x="0" y="0" alpha="0.6" position="bottom" paddingLeft="30" paddingBottom="-50" paddingRight="20" autoHide="true" visible="false">
-		<Include src="library/cml/buttons/infoButton.cml"/>
+	<Menu id="menu" class="menu_container" x="0" y="0" alpha="0.6" position="bottom" paddingLeft="20" paddingBottom="0" paddingRight="20" autoHide="true" visible="false">
+		<Include src="library/cml/buttons/infoFlipButton.cml"/>
 		<Include src="library/cml/buttons/playButton.cml"/>
 		<Include src="library/cml/buttons/pauseButton.cml"/>
 		<Include src="library/cml/buttons/closeButton.cml"/>
 	</Menu>
 	
-	<!-- GESTURES -->
 	<GestureList>
 		<Gesture ref="n-drag" />
-		<Gesture ref="n-scale" />
+		<!--<Gesture ref="n-scale" />-->
+		<Gesture ref="vidviewer-scale" />
 		<Gesture ref="n-rotate" />
 		<Gesture ref="n-tap" />
 	</GestureList>

@@ -4,7 +4,7 @@
 <VideoViewer id="vv" gestureReleaseInertia="true" video="#vid1" front="#front" menu="#menu" back="#back1,#back2" background="#info-bg" frame="#frame" timeout="30" fadeoutDuration="5" dropShadow="true" autoTextLayout="true">
        
         <TouchContainer id="front" visible="true" targetParent="true" mouseChildren="false">
-                <Video id="vid1" src="{image_content}" autoplay="true" width="1000" height="0" scale=".5"/>
+                <Video id="vid1" src="{primary_content}" autoplay="true" width="1000" height="0" scale=".5"/>
         </TouchContainer>
        
 		<TouchContainer id="back1" targetParent="true" mouseChildren="false" clusterBubbling="false" visible="false">
