@@ -41,8 +41,9 @@
 
 
 <!-- <CollectionViewer amountToShow="5" autoShuffle="true" topContainer="t_container" bottomContainer="b_container" gateway="http://184.73.235.134/providence/amfphp-2.1/Amfphp/"> -->
-<CollectionViewer amountToShow="5" autoShuffle="true" bottomContainer="b_container" gateway="http://localhost/providence/amfphp-2.1/Amfphp/">
+<CollectionViewer amountToShow="5" autoShuffle="true" topContainer="t_container" bottomContainer="b_container" gateway="http://localhost/providence/amfphp-2.1/Amfphp/">
 	<Include src="library/cml/ImageViewer.cml"/>
+	<Include src="library/cml/ImageAudioViewer.cml"/>
 	<Include src="library/cml/VideoViewer.cml"/>
 	<Include src="library/cml/DockTemplate1080p.cml"/>
 	

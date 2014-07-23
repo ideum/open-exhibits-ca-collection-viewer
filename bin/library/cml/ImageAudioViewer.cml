@@ -1,8 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <cml gml="library/gml/my_gestures.gml" css="library/css/module/my_styles_modules.css" simulator="false">
 	
-<ImageViewer id="iv" gestureReleaseInertia="true" image="#img1" front="#front" menu="#menu1" back="#back1,#back2" background="#info-bg" timeout="30" fadeoutDuration="5" dropShadow="true" autoTextLayout="true">
+<ImageAudioViewer id="iav" gestureReleaseInertia="true" image="#img1" front="#front" menu="#menu" back="#back1,#back2" background="#info-bg" timeout="30" fadeoutDuration="5" dropShadow="true" autoTextLayout="true">
 
+	<!-- holds the URL for the static visual image to be used in the Dock preview -->
+	<Text id="staticVisualUrl" text="{static_visual_content}" visible="false" />
+	
 	<TouchContainer id="front" visible="true" targetParent="true" mouseChildren="false">
 		<Image id="img1" src="{primary_content}" resample="true" scale=".5" />
 	</TouchContainer>
@@ -20,9 +23,10 @@
 		</GestureList>
 	</ScrollPane>	
 	
-	<Menu id="menu1" class="menu_container" alpha="0.6" position="bottom" paddingLeft="20" paddingBottom="20" paddingRight="20" autoHide="true" visible="false" >
-		<Include src="library/cml/buttons/infoFlipButton.cml"/>
-		<Include src="library/cml/buttons/fontSizeButton.cml"/>
+	<Menu id="menu" class="menu_container" alpha="0.6" position="bottom" paddingLeft="20" paddingBottom="20" paddingRight="20" autoHide="true" visible="false" >
+		<Include src="library/cml/buttons/infoButton.cml"/>
+		<Include src="library/cml/buttons/playButton.cml"/>
+		<Include src="library/cml/buttons/pauseButton.cml"/>
 		<Include src="library/cml/buttons/closeButton.cml"/>
 	</Menu>
 	
@@ -30,6 +34,6 @@
 	<Gesture ref="n-rotate-inertia"/>
 	<Gesture ref="n-scale"/>
 	
-</ImageViewer>	
+</ImageAudioViewer>	
 	
 </cml>

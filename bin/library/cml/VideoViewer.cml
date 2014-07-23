@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <cml gml="library/gml/my_gestures.gml" css="library/css/module/my_styles_modules.css" simulator="false">
 
-<VideoViewer id="vv" gestureReleaseInertia="true" video="#vid1" front="#front" menu="#menu" back="#back1,#back2" background="#info-bg" timeout="999" fadeoutDuration="5" dropShadow="true" autoTextLayout="true">
+<VideoViewer id="vv" gestureReleaseInertia="true" front="#front" menu="#menu" back="#back1,#back2" background="#info-bg" timeout="9999" fadeoutDuration="5" dropShadow="true" autoTextLayout="true">
 	
 	<!-- holds the URL for the static visual image to be used in the Dock preview -->
 	<Text id="staticVisualUrl" text="{static_visual_content}" visible="false" />
 	
 	<TouchContainer id="front" visible="true" targetParent="true" mouseChildren="false">
-		<Video id="vid1" src="{primary_content}" smoothing="true"  autoplay="true" />
+		<Video id="vid1" src="{primary_content}" smoothing="false" autoplay="true" />
     </TouchContainer>
 	
 	<TouchContainer id="back1" targetParent="true" mouseChildren="false" clusterBubbling="false" visible="false">
