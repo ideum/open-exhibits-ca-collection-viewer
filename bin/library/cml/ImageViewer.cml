@@ -20,9 +20,9 @@
 		</GestureList>
 	</ScrollPane>	
 	
-	<Menu id="menu1" class="menu_container" alpha="0.6" position="bottom" paddingLeft="20" paddingBottom="20" paddingRight="20" autoHide="true" visible="false" >
+	<Menu id="menu1" class="menu_container" alpha="0.6" position="bottom" paddingLeft="10" paddingBottom="20" paddingRight="20" autoHide="true" visible="false" >
 		<Include src="library/cml/buttons/infoFlipButton.cml"/>
-		<Include src="library/cml/buttons/fontSizeButton.cml"/>
+		<!--<Include src="library/cml/buttons/fontSizeButton.cml"/>-->
 		<Include src="library/cml/buttons/closeButton.cml"/>
 	</Menu>
 	

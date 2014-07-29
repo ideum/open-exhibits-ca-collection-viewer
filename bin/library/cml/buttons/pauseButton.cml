@@ -3,17 +3,17 @@
 
 <Button id="pause-btn" class="pause_btn" dispatch="down:pause" hit="pause-hit" initial="pause-up" down="pause-down" up="pause-up" out="pause-up">
 	<Container id="pause-up">
-		<Graphic alpha="1" shape="circle" radius="20" lineStroke="1.5" color="0x282E33" />	
-		<SWF alpha="1" x="14.5" y="8.5" color="0xFFFFFF" scale="1.6" classRef="org.openexhibits.assets.Pause" />
+		<Graphic alpha="1" shape="circle" radius="24" lineStroke="3" color="0x282E33" />	
+		<SWF alpha="1" x="18" y="13" color="0xFFFFFF" scale="1.6" classRef="org.openexhibits.assets.Pause" />
 	</Container>
 
 	<Container id="pause-down">
-		<Graphic alpha="1" shape="circle" radius="20" lineStroke="1.5" color="0x495E67" />	
-		<SWF alpha="1" x="14.5" y="8.5" color="0xCCCCCC" scale="1.6" classRef="org.openexhibits.assets.Pause" />
+		<Graphic alpha="1" shape="circle" radius="24" lineStroke="3" color="0x495E67" />	
+		<SWF alpha="1" x="18" y="13" color="0xCCCCCC" scale="1.6" classRef="org.openexhibits.assets.Pause" />
 	</Container>	
 	
 	<Container id="pause-hit">
-		<Graphic id="pause-hit-bg" shape="circle" radius="20" alpha="0" />
+		<Graphic id="pause-hit-bg" shape="circle" radius="24" alpha="0" />
 	</Container>
 </Button>
 

@@ -4,7 +4,7 @@
 <VideoViewer id="vv" gestureReleaseInertia="true" front="#front" menu="#menu" back="#back1,#back2" background="#info-bg" timeout="9999" fadeoutDuration="5" dropShadow="true" autoTextLayout="true">
 	
 	<!-- holds the URL for the static visual image to be used in the Dock preview -->
-	<Text id="staticVisualUrl" text="{static_visual_content}" visible="false" />
+	<Text id="secondaryContentURL" text="{secondary_content}" visible="false" />
 	
 	<TouchContainer id="front" visible="true" targetParent="true" mouseChildren="false">
 		<Video id="vid1" src="{primary_content}" smoothing="false" autoplay="true" />
@@ -23,7 +23,7 @@
 		</GestureList>
 	</ScrollPane>	
 	
-	<Menu id="menu" class="menu_container" x="0" y="0" alpha="0.6" position="bottom" paddingLeft="20" paddingBottom="0" paddingRight="20" autoHide="true" visible="false">
+	<Menu id="menu" class="menu_container" x="0" y="0" alpha="0.6" position="bottom" paddingLeft="5" paddingBottom="-20" paddingRight="-20" autoHide="true" visible="false">
 		<Include src="library/cml/buttons/infoFlipButton.cml"/>
 		<Include src="library/cml/buttons/playButton.cml"/>
 		<Include src="library/cml/buttons/pauseButton.cml"/>
