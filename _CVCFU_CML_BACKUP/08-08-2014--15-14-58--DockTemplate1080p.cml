@@ -1,0 +1,225 @@
+<cml>
+
+<Dock background="background" class="search" handle="handle" height="280" initializeOpen="false" leftHandle="leftHandle" maxClones="5" nextArrow="forward-btn" position="bottom" previousArrow="back-btn" resultsPerPage="3" returnFields="work_description" rightHandle="rightHandle" searchFields="dial_1,dial_2,dial_3" searchTermFilters="true" useSideHandles="true" width="1920" x="0" y="800">
+	<Graphic color="0x14241D" height="280" id="background" lineStroke="2" shape="rectangle" width="1920" />
+	
+	
+	<Container height="60" id="forward-btn" width="60" x="0" y="30">
+		<Graphic alpha="1" color="0x282E33" lineStroke="1.5" radius="20" shape="circle" x="5" y="5" />	
+		<SWF alpha="1" classRef="org.openexhibits.assets.ArrowFill" color="0xFFFFFF" rotation="90" scale="1.6" x="37" y="15" />
+	</Container>
+	
+	<Container height="60" id="back-btn" width="60" x="0" y="30">
+		<Graphic alpha="1" color="0x282E33" lineStroke="1.5" radius="20" shape="circle" x="5" y="5" />	
+		<SWF alpha="1" classRef="org.openexhibits.assets.ArrowFill" color="0xFFFFFF" rotation="-90" scale="1.6" x="13" y="34" />
+	</Container>
+
+	
+	<TouchContainer height="60" id="handle">
+		<Graphic color="0x14241D" fill="color" height="60" lineStroke="2" shape="roundRectangleComplex" topLeftRadius="20" topRightRadius="20" width="1920" />
+		<SWF alpha="1" classRef="org.openexhibits.assets.ArrowOutline" color="0xFFFFFF" scale="1.6" x="25" y="20" />		
+		<SWF alpha="1" classRef="org.openexhibits.assets.ArrowOutline" color="0xFFFFFF" scale="1.6" x="1880" y="20" />		
+		<Text autoSize="center" cacheAsBitmap="true" font="OpenSansLight" fontSize="30" selectable="false" text="BROWSE" textColor="0xffffff" width="1920" y="5" />
+	</TouchContainer>
+	
+	<TouchContainer height="370" id="leftHandle" width="60">
+		<Graphic color="0x14241D" height="370" lineStroke="2" shape="roundRectangleComplex" topLeftRadius="20" width="60" />
+		<SWF alpha="1" classRef="org.openexhibits.assets.ArrowOutline" color="0xFFFFFF" rotation="180" scale="1.6" x="40" y="40" />
+		<Text cacheAsBitmap="true" font="OpenSansLight" fontSize="30" height="300" leading="-5" multiline="true" selectable="false" text="DOCK" textColor="0xffffff" width="30" wordWrap="true" x="17" y="55" />		
+	</TouchContainer>	
+	
+	<TouchContainer height="370" id="rightHandle" width="60">
+		<Graphic color="0x14241D" height="370" lineStroke="2" shape="roundRectangleComplex" topRightRadius="20" width="60" />
+		<SWF alpha="1" classRef="org.openexhibits.assets.ArrowOutline" color="0xFFFFFF" rotation="180" scale="1.6" x="40" y="40" />
+		<Text cacheAsBitmap="true" font="OpenSansLight" fontSize="30" height="300" leading="-5" multiline="true" selectable="false" text="DOCK" textColor="0xffffff" width="30" wordWrap="true" x="17" y="55" />		
+	</TouchContainer>	
+
+	
+		
+	<Container class="dials">
+		
+		<Container id="dial-1-container" width="275">
+			
+			<Graphic color="0x14241D" fill="color" height="35" lineColor="0x303030" lineStroke="1" shape="rectangle" width="275" y="1" />
+			<Text autoSize="left" border="false" borderColor="0xFFFFFF" font="OpenSansBold" fontSize="22" selectable="false" text="Collection" textAlign="left" textColor="0xffffff" x="22" y="1" />
+			
+			<Graphic color="0x14241D" fill="color" height="230" lineColor="0x303030" lineStroke="1" shape="rectangle" width="275" y="36" />
+			<Dial class="dial-bot" continuous="false" gradientColors="0x14241D, 0xDDDDDD, 0x14241D" height="180" id="dial-1" leftTriangleColor="0x14241D" leftTriangleScale=".75" rightTriangleColor="0x14241D" rightTriangleScale=".75" selectedTextColor="0x14241D" text="Collier,,&#10;Chinese Ceramics,,&#10;Musical Instruments,,&#10;Navajo Rugs" textColor="0xcccccc" width="270" x="2" y="40" />
+		</Container>
+		
+			
+		<Container id="dial-2-container" width="275">
+			
+			<Graphic color="0x14241D" fill="color" height="35" lineColor="0x303030" lineStroke="1" shape="rectangle" width="275" y="1" />
+			<Text autoSize="left" border="false" borderColor="0xFFFFFF" font="OpenSansBold" fontSize="22" selectable="false" text="Category 1" textAlign="left" textColor="0xffffff" x="22" y="1" />
+			
+			<Graphic color="0x14241D" fill="color" height="230" lineColor="0x303030" lineStroke="1" shape="rectangle" width="275" y="36" />
+			<Dial class="dial-bot" continuous="false" filterDial="dial-1" gradientColors="0x14241D, 0xDDDDDD, 0x14241D" height="180" id="dial-2" leftTriangleColor="0x14241D" leftTriangleScale=".75" rightTriangleColor="0x14241D" rightTriangleScale=".75" selectedTextColor="0x14241D" text="Navajo Rugs:Chief Blanket, phase II,,&#10;Navajo Rugs:Two Grey Hills Rug,,&#10;Navajo Rugs:Germantown Rug,,&#10;Musical Instruments:Percussion,,&#10;Musical Instruments:Drum,,&#10;Collier:Collier,,&#10;Navajo Rugs:Chief Blanket, phase I,,&#10;Chinese Ceramics:Jar,,&#10;Navajo Rugs:Crystal Rug,,&#10;Navajo Rugs:Eyedazzler,,&#10;Musical Instruments:Lamellophone,,&#10;Navajo Rugs:Old Chinle Rug,,&#10;Navajo Rugs:Unprovenienced Rug,,&#10;Navajo Rugs:Wearing Blanket, child design,,&#10;Chinese Ceramics:Tripod,,&#10;Navajo Rugs:Transitional Blanket,,&#10;Navajo Rugs:Two Gray Hills Rug,,&#10;Musical Instruments:Horn,,&#10;Navajo Rugs:Yeii Bicheii Rug,,&#10;Navajo Rugs:Klagetoh Rug,,&#10;Navajo Rugs:Chief Blanket, phase III,,&#10;Navajo Rugs:Wearing Blanket, Manta/Dress,,&#10;Navajo Rugs:Slave Blanket,,&#10;Navajo Rugs:Saddle Blanket,,&#10;Musical Instruments:Organ,,&#10;Navajo Rugs:Wearing Blanket, woman style,,&#10;Navajo Rugs:Shawl,,&#10;Navajo Rugs:Chinle Revival Rug,,&#10;Musical Instruments:String,,&#10;Navajo Rugs:Ganado Rug,,&#10;Musical Instruments:Peru,,&#10;Navajo Rugs:Geometric Rug,,&#10;Navajo Rugs:Yeii Rug,,&#10;Chinese Ceramics:Statue,,&#10;Musical Instruments:Brass,,&#10;Navajo Rugs:Storm Pattern Rug,,&#10;Navajo Rugs:Specialty Weave Rug,,&#10;Chinese Ceramics:Jug,,&#10;Navajo Rugs:Rug,,&#10;Navajo Rugs:Wearing Blanket,,&#10;Navajo Rugs:Pictorial Rug,,&#10;Navajo Rugs:Eyedazzler (Transitional Period),,&#10;Musical Instruments:Wind" textColor="0xcccccc" width="270" x="2" y="40" />
+		</Container>
+		
+			
+		<Container id="dial-3-container" width="275">
+			<Graphic color="0x14241D" fill="color" height="35" lineColor="0x303030" lineStroke="1" shape="rectangle" width="275" y="1" />
+			<Text autoSize="left" border="false" borderColor="0xFFFFFF" font="OpenSansBold" fontSize="22" selectable="false" text="Category 2" textAlign="left" textColor="0xffffff" x="22" y="1" />
+			
+			<Graphic color="0x14241D" fill="color" height="230" lineColor="0x303030" lineStroke="1" shape="rectangle" width="275" y="36" />
+			<Dial class="dial-bot" continuous="false" filterDial="dial-2" gradientColors="0x14241D, 0xDDDDDD, 0x14241D" height="180" id="dial-3" leftTriangleColor="0x14241D" leftTriangleScale=".75" rightTriangleColor="0x14241D" rightTriangleScale=".75" selectedTextColor="0x14241D" text="Eyedazzler (Transitional Period):Unknown,,&#10;Saddle Blanket:Unknown,,&#10;Transitional Blanket:Unknown,,&#10;Brass:Europe,,&#10;Yeii Rug:Lukachukai, AZ,,&#10;Tripod:Inner Mongolia,,&#10;Crystal Rug:Wide Ruins, AZ,,&#10;Lamellophone:Africa,,&#10;String:Asia,,&#10;Peru:Nazca,,&#10;Eyedazzler:Fort Wingate, AZ,,&#10;Shawl:Lukachukai, AZ,,&#10;Rug:Wide Ruins, NM,,&#10;Rug:Unknown,,&#10;Statue:Northwest China,,&#10;Old Chinle Rug:Chinle, AZ,,&#10;Peru:Nazcaa,,&#10;Chief Blanket, phase III:Unknown,,&#10;Rug:Ganado, Arizona,,&#10;Chief Blanket, phase II:Unknown,,&#10;Chinle Revival Rug:Chinle, AZ,,&#10;Ganado Rug:Ganado, AZ,,&#10;Rug:Houck, AZ,,&#10;Unprovenienced Rug:Zuni area, NM,,&#10;Wind:Japan,,&#10;Wearing Blanket, Manta/Dress:Unknown,,&#10;Pictorial Rug:Lukachukai, AZ,,&#10;Yeii Rug:Shiprock, NM,,&#10;Chinle Revival Rug:Crystal, NM,,&#10;Storm Pattern Rug:Two Grey Hills, AZ,,&#10;Jug:Gansu Province,,&#10;Klagetoh Rug:Klagetoh, AZ,,&#10;Wearing Blanket, child design:Unknown,,&#10;Pictorial Rug:Unknown,,&#10;String:Europe,,&#10;String:North America,,&#10;Two Gray Hills Rug:Toadlena, NM,,&#10;Wind:Oceania,,&#10;Jug:Sichuan province,,&#10;Crystal Rug:Crystal, NM,,&#10;Rug:Nazlini, AZ,,&#10;Percussion:Europe,,&#10;Rug:Red Mesa, AZ,,&#10;Drum:North America,,&#10;Rug:Teec Nos Pos, AZ,,&#10;Yeii Bicheii Rug:Shiprock, NM,,&#10;Wearing Blanket, woman style:Unknown,,&#10;Two Grey Hills Rug:Toadlena, AZ,,&#10;Wind:North America,,&#10;Germantown Rug:Unknown,,&#10;Storm Pattern Rug:Donnehotso, AZ,,&#10;Rug:Navajo Nation, AZ,,&#10;Geometric Rug:Barrego Pass, NM,,&#10;Wind:Asia,,&#10;Wearing Blanket:Unknown,,&#10;Pictorial Rug:Monticello, UT,,&#10;Rug:Ganado, AZ,,&#10;Rug:Crystal, NM,,&#10;Storm Pattern Rug:Tuba City, AZ,,&#10;Two Grey Hills Rug:Two Grey Hills, NM,,&#10;Rug:Wide Ruins, AZ,,&#10;Slave Blanket:Unknown,,&#10;Wind:South America,,&#10;Yeii Rug:Teec Nos Pos, AZ,,&#10;Organ:Asia,,&#10;Percussion:Asia,,&#10;Tripod:Long Shan,,&#10;Pictorial Rug:Newcomb, NM,,&#10;Unprovenienced Rug:Red Lake, AZ,,&#10;Jar:Southern China,,&#10;Specialty Weave Rug:Unknown,,&#10;Collier:Collier,,&#10;Yeii Bicheii Rug:Unknown,,&#10;Storm Pattern Rug:Unknown,,&#10;Horn:South America,,&#10;Lamellophone:Asia,,&#10;Chief Blanket, phase I:Unknown,,&#10;Eyedazzler:Unknown,,&#10;Saddle Blanket:Gallup, NM,,&#10;Pictorial Rug:Klagetoh, AZ" textColor="0xcccccc" width="270" x="2" y="40" />
+		</Container>
+		
+		<Container id="album-container" width="975" x="-1">
+			<Graphic color="0x14241D" fill="color" height="280" lineColor="0x303030" lineStroke="1" shape="rectangle" width="975" y="1" />
+			<Text autoSize="center" font="OpenSansBold" fontSize="22" id="result_text" selectable="false" text="" textColor="0xffffff" width="945" y="1" />
+			<MenuAlbum backgroundColor="0x14241D" centerContent="false" id="menu1" loop="false" margin="8" snapping="false" width="945" x="15" y="41" />	
+			<Text autoSize="left" border="false" borderColor="0xFFFFFF" class="dock-text" font="OpenSansBold" fontSize="34" height="1000" id="title-text" selectable="false" text="Maxwell Museum Collection Viewer" textColor="0xffffff" width="970" x="20" y="20" />
+			<Text autoSize="left" border="false" borderColor="0xFFFFFF" class="dock-text" font="OpenSansBold" fontSize="25" height="500" id="instr-text" multiline="true" selectable="false" text="Use the dials to make a selection. Tap on the thumbnails to load them onto the table." textColor="0xffffff" width="700" wordWrap="true" x="20" y="80" />				
+			
+			<Container id="info-pane" visible="false" x="50" y="25">
+				<Graphic alpha="1" color="0x14241D" cornerHeight="15" cornerWidth="15" fill="color" height="173" lineColor="0x303030" lineStroke="1.5" shape="roundRectangle" width="870" y="1">
+					<Filter alpha="0.75" angle="135" distance="8" ref="DropShadow" />
+				</Graphic>
+				
+				<ScrollPane clusterBubbling="true" height="148" id="info-scroll" mouseChildren="true" nativeTransform="true" paneStroke="0" paneStrokeColor="0xff0000" scrollThickness="20" targetParent="false" visible="true" width="845" y="12.5">
+					<ScrollBar buttonFill="0x333333" buttonVisible="false" cornerHeight="15" cornerWidth="15" fill="0x303030" railShape="roundRectangle" scaleY=".8" thumbFill="0x555555" y="25" />
+					<Container height="255" width="837" x="11" y="3">
+						<Text autoSize="left" color="0xFFFFFF" font="OpenSansBold" fontSize="24" selectable="false" text="Maxwell Museum Collection Viewer" width="815" y="3" />
+						<Text autoSize="left" border="false" borderColor="0xFFFFFF" font="OpenSansRegular" fontSize="18" id="info_text" multiline="true" selectable="false" textColor="0xffffff" width="837" wordWrap="true" y="53">
+							
+							<p> null </p>
+							<p> null </p>
+							
+						</Text>
+					</Container>
+				</ScrollPane>
+			</Container>			
+			
+			<Button class="info_btn" dispatch="toggle:info" id="info-btn" scale="0.5" toggle="up" x="942" y="8">
+				<Container id="info-up">
+					<Graphic alpha="1" color="0x14241D" lineStroke="3" radius="24" shape="circle" />	
+					<SWF alpha="1" classRef="org.openexhibits.assets.Info" color="0xFFFFFF" scale="1.6" x="18" y="9.5" />
+				</Container>
+				<Container id="info-down">
+					<Graphic color="0x14241D" id="info-close" lineStroke="3" radius="24" shape="circle" />	
+					<SWF alpha="1" classRef="org.openexhibits.assets.Close" color="0xFFFFFF" scale="1.6" x="15" y="15" />
+				</Container>			
+			</Button>			
+			
+		</Container>
+		
+		<Layout classRef="ListLayout" marginX="0" useMargins="true" />
+		
+	</Container>
+</Dock>
+
+
+<Dock background="background" class="search" handle="handle" height="280" initializeOpen="false" leftHandle="leftHandle" maxClones="5" nextArrow="forward-btn" position="top" previousArrow="back-btn" resultsPerPage="3" returnFields="work_description" rightHandle="rightHandle" rotation="180" searchFields="dial_1,dial_2,dial_3" useSideHandles="true" width="1920" x="1920" y="280">
+
+
+	<Container height="60" id="forward-btn" width="60" x="0" y="30">
+		<Graphic alpha="1" color="0x282E33" lineStroke="1.5" radius="20" shape="circle" />	
+		<SWF alpha="1" classRef="org.openexhibits.assets.ArrowFill" color="0xFFFFFF" rotation="90" scale="1.6" x="32" y="10" />
+	</Container>
+	
+	<Container height="60" id="back-btn" width="60" x="0" y="30">
+		<Graphic alpha="1" color="0x282E33" lineStroke="1.5" radius="20" shape="circle" />	
+		<SWF alpha="1" classRef="org.openexhibits.assets.ArrowFill" color="0xFFFFFF" rotation="-90" scale="1.6" x="8" y="29" />
+	</Container>
+	
+	<Graphic color="0x14241D" height="280" id="background" lineStroke="2" shape="rectangle" width="1920" />
+
+	
+	<TouchContainer height="60" id="handle">
+		<Graphic color="0x14241D" fill="color" height="60" lineStroke="2" shape="roundRectangleComplex" topLeftRadius="20" topRightRadius="20" width="1920" />
+		<SWF alpha="1" classRef="org.openexhibits.assets.ArrowOutline" color="0xFFFFFF" scale="1.6" x="25" y="20" />		
+		<SWF alpha="1" classRef="org.openexhibits.assets.ArrowOutline" color="0xFFFFFF" scale="1.6" x="1880" y="20" />		
+		<Text autoSize="center" cacheAsBitmap="true" font="OpenSansLight" fontSize="30" selectable="false" text="BROWSE" textColor="0xffffff" width="1920" y="5" />
+	</TouchContainer>
+	
+	<TouchContainer height="370" id="leftHandle" width="60">
+		<Graphic color="0x14241D" height="370" lineStroke="2" shape="roundRectangleComplex" topLeftRadius="20" width="60" />
+		<SWF alpha="1" classRef="org.openexhibits.assets.ArrowOutline" color="0xFFFFFF" rotation="180" scale="1.6" x="40" y="40" />
+		<Text cacheAsBitmap="true" font="OpenSansLight" fontSize="30" height="300" leading="-5" multiline="true" selectable="false" text="DOCK" textColor="0xffffff" width="30" wordWrap="true" x="17" y="55" />		
+	</TouchContainer>	
+	
+	<TouchContainer height="370" id="rightHandle" width="60">
+		<Graphic color="0x14241D" height="370" lineStroke="2" shape="roundRectangleComplex" topRightRadius="20" width="60" />
+		<SWF alpha="1" classRef="org.openexhibits.assets.ArrowOutline" color="0xFFFFFF" rotation="180" scale="1.6" x="40" y="40" />
+		<Text cacheAsBitmap="true" font="OpenSansLight" fontSize="30" height="300" leading="-5" multiline="true" selectable="false" text="DOCK" textColor="0xffffff" width="30" wordWrap="true" x="17" y="55" />		
+	</TouchContainer>	
+
+	
+		
+	<Container class="dials" x="1" y="1">
+		
+		<Container id="dial-4-container" width="275">
+			
+			<Graphic color="0x14241D" fill="color" height="35" lineColor="0x303030" lineStroke="1" shape="rectangle" width="275" y="1" />
+			<Text autoSize="left" border="false" borderColor="0xFFFFFF" font="OpenSansBold" fontSize="22" text="Collection" textAlign="left" textColor="0xffffff" x="22" y="1" />
+			
+			<Graphic color="0x14241D" fill="color" height="230" lineColor="0x303030" lineStroke="1" shape="rectangle" width="275" y="36" />
+			<Dial class="dial-bot" continuous="false" gradientColors="0x14241D, 0xDDDDDD, 0x14241D" height="180" id="dial-4" invertDrag="true" leftTriangleColor="0x14241D" leftTriangleScale=".75" rightTriangleColor="0x14241D" rightTriangleScale=".75" selectedTextColor="0x14241D" text="Collier,,&#10;Chinese Ceramics,,&#10;Musical Instruments,,&#10;Navajo Rugs" textColor="0xcccccc" width="270" x="2" y="40" />
+		</Container>
+		
+			
+		<Container id="dial-5-container" width="275">
+			
+			<Graphic color="0x14241D" fill="color" height="35" lineColor="0x303030" lineStroke="1" shape="rectangle" width="275" y="1" />
+			<Text autoSize="left" border="false" borderColor="0xFFFFFF" font="OpenSansBold" fontSize="22" selectable="false" text="Dial 2" textAlign="left" textColor="0xffffff" x="22" y="1" />
+			
+			<Graphic color="0x14241D" fill="color" height="230" lineColor="0x303030" lineStroke="1" shape="rectangle" width="275" y="36" />
+			<Dial class="dial-bot" continuous="false" filterDial="dial-4" gradientColors="0x14241D, 0xDDDDDD, 0x14241D" height="180" id="dial-5" invertDrag="true" leftTriangleColor="0x14241D" leftTriangleScale=".75" rightTriangleColor="0x14241D" rightTriangleScale=".75" selectedTextColor="0x14241D" text="Navajo Rugs:Chief Blanket, phase II,,&#10;Navajo Rugs:Two Grey Hills Rug,,&#10;Navajo Rugs:Germantown Rug,,&#10;Musical Instruments:Percussion,,&#10;Musical Instruments:Drum,,&#10;Collier:Collier,,&#10;Navajo Rugs:Chief Blanket, phase I,,&#10;Chinese Ceramics:Jar,,&#10;Navajo Rugs:Crystal Rug,,&#10;Navajo Rugs:Eyedazzler,,&#10;Musical Instruments:Lamellophone,,&#10;Navajo Rugs:Old Chinle Rug,,&#10;Navajo Rugs:Unprovenienced Rug,,&#10;Navajo Rugs:Wearing Blanket, child design,,&#10;Chinese Ceramics:Tripod,,&#10;Navajo Rugs:Transitional Blanket,,&#10;Navajo Rugs:Two Gray Hills Rug,,&#10;Musical Instruments:Horn,,&#10;Navajo Rugs:Yeii Bicheii Rug,,&#10;Navajo Rugs:Klagetoh Rug,,&#10;Navajo Rugs:Chief Blanket, phase III,,&#10;Navajo Rugs:Wearing Blanket, Manta/Dress,,&#10;Navajo Rugs:Slave Blanket,,&#10;Navajo Rugs:Saddle Blanket,,&#10;Musical Instruments:Organ,,&#10;Navajo Rugs:Wearing Blanket, woman style,,&#10;Navajo Rugs:Shawl,,&#10;Navajo Rugs:Chinle Revival Rug,,&#10;Musical Instruments:String,,&#10;Navajo Rugs:Ganado Rug,,&#10;Musical Instruments:Peru,,&#10;Navajo Rugs:Geometric Rug,,&#10;Navajo Rugs:Yeii Rug,,&#10;Chinese Ceramics:Statue,,&#10;Musical Instruments:Brass,,&#10;Navajo Rugs:Storm Pattern Rug,,&#10;Navajo Rugs:Specialty Weave Rug,,&#10;Chinese Ceramics:Jug,,&#10;Navajo Rugs:Rug,,&#10;Navajo Rugs:Wearing Blanket,,&#10;Navajo Rugs:Pictorial Rug,,&#10;Navajo Rugs:Eyedazzler (Transitional Period),,&#10;Musical Instruments:Wind" textColor="0xcccccc" width="270" x="2" y="40" />
+		</Container>
+		
+			
+		<Container id="dial-6-container" width="275">
+			<Graphic color="0x14241D" fill="color" height="35" lineColor="0x303030" lineStroke="1" shape="rectangle" width="275" y="1" />
+			<Text autoSize="left" border="false" borderColor="0xFFFFFF" font="OpenSansBold" fontSize="22" selectable="false" text="Dial 3" textAlign="left" textColor="0xffffff" x="22" y="1" />
+			
+			<Graphic color="0x14241D" fill="color" height="230" lineColor="0x303030" lineStroke="1" shape="rectangle" width="275" y="36" />
+			<Dial class="dial-bot" continuous="false" filterDial="dial-5" gradientColors="0x14241D, 0xDDDDDD, 0x14241D" height="180" id="dial-6" invertDrag="true" leftTriangleColor="0x14241D" leftTriangleScale=".75" rightTriangleColor="0x14241D" rightTriangleScale=".75" selectedTextColor="0x14241D" text="Eyedazzler (Transitional Period):Unknown,,&#10;Saddle Blanket:Unknown,,&#10;Transitional Blanket:Unknown,,&#10;Brass:Europe,,&#10;Yeii Rug:Lukachukai, AZ,,&#10;Tripod:Inner Mongolia,,&#10;Crystal Rug:Wide Ruins, AZ,,&#10;Lamellophone:Africa,,&#10;String:Asia,,&#10;Peru:Nazca,,&#10;Eyedazzler:Fort Wingate, AZ,,&#10;Shawl:Lukachukai, AZ,,&#10;Rug:Wide Ruins, NM,,&#10;Rug:Unknown,,&#10;Statue:Northwest China,,&#10;Old Chinle Rug:Chinle, AZ,,&#10;Peru:Nazcaa,,&#10;Chief Blanket, phase III:Unknown,,&#10;Rug:Ganado, Arizona,,&#10;Chief Blanket, phase II:Unknown,,&#10;Chinle Revival Rug:Chinle, AZ,,&#10;Ganado Rug:Ganado, AZ,,&#10;Rug:Houck, AZ,,&#10;Unprovenienced Rug:Zuni area, NM,,&#10;Wind:Japan,,&#10;Wearing Blanket, Manta/Dress:Unknown,,&#10;Pictorial Rug:Lukachukai, AZ,,&#10;Yeii Rug:Shiprock, NM,,&#10;Chinle Revival Rug:Crystal, NM,,&#10;Storm Pattern Rug:Two Grey Hills, AZ,,&#10;Jug:Gansu Province,,&#10;Klagetoh Rug:Klagetoh, AZ,,&#10;Wearing Blanket, child design:Unknown,,&#10;Pictorial Rug:Unknown,,&#10;String:Europe,,&#10;String:North America,,&#10;Two Gray Hills Rug:Toadlena, NM,,&#10;Wind:Oceania,,&#10;Jug:Sichuan province,,&#10;Crystal Rug:Crystal, NM,,&#10;Rug:Nazlini, AZ,,&#10;Percussion:Europe,,&#10;Rug:Red Mesa, AZ,,&#10;Drum:North America,,&#10;Rug:Teec Nos Pos, AZ,,&#10;Yeii Bicheii Rug:Shiprock, NM,,&#10;Wearing Blanket, woman style:Unknown,,&#10;Two Grey Hills Rug:Toadlena, AZ,,&#10;Wind:North America,,&#10;Germantown Rug:Unknown,,&#10;Storm Pattern Rug:Donnehotso, AZ,,&#10;Rug:Navajo Nation, AZ,,&#10;Geometric Rug:Barrego Pass, NM,,&#10;Wind:Asia,,&#10;Wearing Blanket:Unknown,,&#10;Pictorial Rug:Monticello, UT,,&#10;Rug:Ganado, AZ,,&#10;Rug:Crystal, NM,,&#10;Storm Pattern Rug:Tuba City, AZ,,&#10;Two Grey Hills Rug:Two Grey Hills, NM,,&#10;Rug:Wide Ruins, AZ,,&#10;Slave Blanket:Unknown,,&#10;Wind:South America,,&#10;Yeii Rug:Teec Nos Pos, AZ,,&#10;Organ:Asia,,&#10;Percussion:Asia,,&#10;Tripod:Long Shan,,&#10;Pictorial Rug:Newcomb, NM,,&#10;Unprovenienced Rug:Red Lake, AZ,,&#10;Jar:Southern China,,&#10;Specialty Weave Rug:Unknown,,&#10;Collier:Collier,,&#10;Yeii Bicheii Rug:Unknown,,&#10;Storm Pattern Rug:Unknown,,&#10;Horn:South America,,&#10;Lamellophone:Asia,,&#10;Chief Blanket, phase I:Unknown,,&#10;Eyedazzler:Unknown,,&#10;Saddle Blanket:Gallup, NM,,&#10;Pictorial Rug:Klagetoh, AZ" textColor="0xcccccc" width="270" x="2" y="40" />
+		</Container>
+		
+		<Container id="album-container" width="975" x="-1" y="1">
+			<Graphic color="0x14241D" fill="color" height="280" lineColor="0x303030" lineStroke="1" shape="rectangle" width="975" y="1" />
+			<Text autoSize="center" font="OpenSansBold" fontSize="22" id="result_text" selectable="false" text="" textColor="0xffffff" width="945" y="1" />
+			<MenuAlbum backgroundColor="0x14241D" centerContent="false" dragAngle="180" id="menu1" loop="false" margin="8" snapping="false" width="945" x="15" y="41" />	
+			<Text autoSize="left" border="false" borderColor="0xFFFFFF" class="dock-text" font="OpenSansBold" fontSize="34" height="1000" id="title-text" selectable="false" text="Maxwell Museum Collection Viewer" textColor="0xffffff" width="970" x="20" y="20" />
+			<Text autoSize="left" border="false" borderColor="0xFFFFFF" class="dock-text" font="OpenSansBold" fontSize="25" height="500" id="instr-text" multiline="true" selectable="false" text="Use the dials to make a selection. Tap on the thumbnails to load them onto the table." textColor="0xffffff" width="700" wordWrap="true" x="20" y="80" />
+		
+			<Container id="info-pane" visible="false" x="50" y="25">
+				<Graphic alpha="1" color="0x14241D" cornerHeight="15" cornerWidth="15" fill="color" height="173" lineColor="0x303030" lineStroke="1.5" shape="roundRectangle" width="870" y="1">
+					<Filter alpha="0.75" angle="135" distance="8" ref="DropShadow" />
+				</Graphic>
+				
+				<ScrollPane clusterBubbling="true" height="148" id="info-scroll" mouseChildren="true" nativeTransform="true" paneStroke="0" paneStrokeColor="0xff0000" scrollThickness="20" targetParent="false" visible="true" width="845" y="12.5">
+					<ScrollBar buttonFill="0x333333" buttonVisible="false" cornerHeight="15" cornerWidth="15" fill="0x303030" railShape="roundRectangle" scaleY=".8" thumbFill="0x555555" y="25" />
+					<Container height="255" width="837" x="11" y="3">
+						<Text autoSize="left" color="0xFFFFFF" font="OpenSansBold" fontSize="24" selectable="false" text="Maxwell Museum Collection Viewer" width="815" y="3" />
+						<Text autoSize="left" border="false" borderColor="0xFFFFFF" font="OpenSansRegular" fontSize="18" id="info_text" multiline="true" selectable="false" textColor="0xffffff" width="837" wordWrap="true" y="53">
+							
+							<p> null </p>
+							<p> null </p>
+							
+						</Text>
+					</Container>
+				</ScrollPane>
+			</Container>	
+			
+			<Button class="info_btn" dispatch="toggle:info" id="info-btn" scale="0.5" toggle="up" x="942" y="8">
+				<Container id="info-up">
+					<Graphic alpha="1" color="0x14241D" lineStroke="3" radius="24" shape="circle" />	
+					<SWF alpha="1" classRef="org.openexhibits.assets.Info" color="0xFFFFFF" scale="1.6" x="18" y="9.5" />
+				</Container>
+				<Container id="info-down">
+					<Graphic color="0x14241D" id="info-close" lineStroke="3" radius="24" shape="circle" />	
+					<SWF alpha="1" classRef="org.openexhibits.assets.Close" color="0xFFFFFF" scale="1.6" x="15" y="15" />
+				</Container>			
+			</Button>
+			
+		</Container>
+		
+		<Layout classRef="ListLayout" marginX="0" useMargins="true" />
+		
+	</Container>
+</Dock>
+
+</cml>
