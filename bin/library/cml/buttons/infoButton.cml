@@ -3,15 +3,15 @@
 
 <Button id="info-btn" class="info_btn" dispatch="down:info" hit="info-hit" initial="info-up" down="info-down" up="info-up" out="info-up">
 	<Container id="info-up">
-		<Graphic alpha="1" shape="circle" radius="24" lineStroke="3" color="0x000000" />	
-		<SWF alpha="1" x="18" y="9.5" color="0xFFFFFF" scale="1.6" classRef="org.openexhibits.assets.Info" />
+		<Graphic alpha="1" shape="circle" radius="15" lineStroke="3" color="0x000000" />	
+		<SWF alpha="1" x="12" y="7" color="0xFFFFFF" scale="1.0" classRef="org.openexhibits.assets.Info" />
 	</Container>
 	<Container id="info-down">
-		<Graphic id="info-bg-down" shape="circle" radius="24" lineStroke="3" color="0x000000" />	
-		<SWF alpha="1" x="18" y="9.5" color="0xCCCCCC" scale="1.6" classRef="org.openexhibits.assets.Info" />
+		<Graphic id="info-bg-down" shape="circle" radius="15" lineStroke="3" color="0x000000" />	
+		<SWF alpha="1" x="12" y="7" color="0xCCCCCC" scale="1.0" classRef="org.openexhibits.assets.Info" />
 	</Container>	
 	<Container id="info-hit">
-		<Graphic id="info-hit-bg" shape="circle" radius="24" color="0x666666" alpha="0" />
+		<Graphic id="info-hit-bg" shape="circle" radius="15" color="0x666666" alpha="0" />
 	</Container>
 </Button>
 

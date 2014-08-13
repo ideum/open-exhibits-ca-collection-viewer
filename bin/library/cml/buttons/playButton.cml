@@ -3,15 +3,17 @@
 
 <Button id="play-btn" class="play_btn" dispatch="down:play" hit="play-hit" initial="play-up" down="play-down" up="play-up" out="play-up">
 	<Container id="play-up">
-		<Graphic alpha="1" shape="circle" radius="24" lineStroke="3" color="0x282E33" />	
-		<SWF alpha="1"x="18" y="13" color="0xFFFFFF" scale="1.6" classRef="org.openexhibits.assets.Play" />
+		<Graphic alpha="1" shape="circle" radius="15" lineStroke="3" color="0x282E33" />	
+		<SWF alpha="1"x="11.5" y="8.5" color="0xFFFFFF" scale="1.0" classRef="org.openexhibits.assets.Play" />
 	</Container>
+	
 	<Container id="play-down">
-		<Graphic alpha="1" shape="circle" radius="24" lineStroke="3" color="0x495E67" />	
-		<SWF alpha="1" x="18" y="13" color="0xCCCCCC" scale="1.6" classRef="org.openexhibits.assets.Play" />
-	</Container>	
+		<Graphic alpha="1" shape="circle" radius="15" lineStroke="3" color="0x495E67" />	
+		<SWF alpha="1" x="11.5" y="8.5" color="0xCCCCCC" scale="1.0" classRef="org.openexhibits.assets.Play" />
+	</Container>
+	
 	<Container id="play-hit">
-		<Graphic id="play-hit-bg" shape="circle" radius="24" color="0x666666" alpha="0" />
+		<Graphic id="play-hit-bg" shape="circle" radius="15" color="0x666666" alpha="0" />
 	</Container>
 </Button>
 

@@ -152,7 +152,8 @@
 							<match>
 								<action>
 									<initial>
-										<point event_duration_max="200" translation_max="10"/>
+										<!-- bumped to 20 from 10 -->
+										<point event_duration_max="200" translation_max="20"/>
 										<cluster point_number="0"/>
 										<event touch_event="gwTouchEnd"/>
 									</initial>

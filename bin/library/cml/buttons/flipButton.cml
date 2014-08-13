@@ -3,15 +3,15 @@
 
 <Button id="flip-btn" class="flip_btn" dispatch="down:info" hit="flip-hit" initial="flip-up" down="flip-down" up="flip-up" out="flip-up">
 	<Container id="flip-up">
-		<Graphic alpha="1" shape="circle" radius="24" lineStroke="3" color="0x000000" />	
-		<SWF alpha="1" x="9" y="11" color="0xFFFFFF" scale="1.6" classRef="org.openexhibits.assets.Flip" />
+		<Graphic alpha="1" shape="circle" radius="15" lineStroke="3" color="0x000000" />	
+		<SWF alpha="1" x="9" y="11" color="0xFFFFFF" scale="1.0" classRef="org.openexhibits.assets.Flip" />
 	</Container>
 	<Container id="flip-down">
-		<Graphic id="flip-bg-down" shape="circle" radius="24" lineStroke="3" color="0x000000" />	
-		<SWF alpha="1" x="9" y="11" color="0xCCCCCC" scale="1.6" classRef="org.openexhibits.assets.Flip" />
+		<Graphic id="flip-bg-down" shape="circle" radius="15" lineStroke="3" color="0x000000" />	
+		<SWF alpha="1" x="9" y="11" color="0xCCCCCC" scale="1.0" classRef="org.openexhibits.assets.Flip" />
 	</Container>	
 	<Container id="flip-hit">
-		<Graphic id="flip-hit-bg" shape="circle" radius="24" color="0x666666" alpha="0" />
+		<Graphic id="flip-hit-bg" shape="circle" radius="15" color="0x666666" alpha="0" />
 	</Container>
 </Button>
 

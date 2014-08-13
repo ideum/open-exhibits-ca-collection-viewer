@@ -24,6 +24,10 @@ package
 		public static var OpenSansLight:Class;
 		Font.registerFont(OpenSansLight);
 		
+		[Embed(source="/../lib/wts55.ttf",fontName='SimSongLight',fontFamily='SimSong',fontWeight='light',fontStyle='normal',mimeType='application/x-font-truetype',advancedAntiAliasing='true',embedAsCFF='false')]
+		public static var SimSongLight:Class;
+		Font.registerFont(SimSongLight);
+		
 		public function Main() 
 		{
 			super();
