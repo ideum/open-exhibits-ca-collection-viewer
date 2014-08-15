@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cml>
+
+<!--CA doesn't play nicely with pausing audio files (trying to resume playback after pausing always restarts playback).
+	This button has a stop graphic, but otherwise behaves like a pause button.-->
+<Button id="pause-btn" class="pause_btn" dispatch="down:pause" hit="pause-hit" initial="pause-up" down="pause-down" up="pause-up" out="pause-up">
+	<Container id="pause-up">
+		<Graphic alpha="1" shape="circle" radius="15" lineStroke="3" color="0x282E33" />	
+		<Image alpha="1" x="10" y="10" color="0xFFFFFF" scale="1.0" src="library/assets/stop_button.jpg"/>
+	</Container>
+
+	<Container id="pause-down">
+		<Graphic alpha="1" shape="circle" radius="15" lineStroke="3" color="0x495E67" />	
+		<Image alpha="1" x="10" y="10" color="0xCCCCCC" scale="1.0" src="library/assets/stop_button.jpg"/>
+	</Container>	
+	
+	<Container id="pause-hit">
+		<Graphic id="pause-hit-bg" shape="circle" radius="15" color="0x666666" alpha="0"/>
+		<Image alpha="1" x="10" y="10" color="0xFFFFFF" scale="1.0" src="library/assets/stop_button.jpg"/>
+	</Container>
+</Button>
+
+</cml>

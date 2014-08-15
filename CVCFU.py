@@ -56,6 +56,7 @@ def buildCombSet(dialNumber):
     # for dial 2, we use the first and second members, for dial 3 we
     # use the second and third members
     for x in range(0, len(tripleList)):
+        #print x
         dialSet.add((tripleList[x][y], tripleList[x][z]))
 
     return buildCombStr(dialSet, dialNumber)
@@ -64,6 +65,8 @@ def buildCombStr(dialSet, dialNumber):
     dialSetLen = len(dialSet) # the number of unique combinations
     dialCombStr = ""
 
+    dialSet = sorted(dialSet)
+    
     if dialSetLen == 1:
         member = dialSet.pop()
         if dialNumber == 1:
@@ -178,13 +181,16 @@ def writeBackup(filePath):
 
 ## below is the pseudo-equivalent of this script's main() function ##
 if len(sys.argv) < 2:
-    print("Invalid args. Usage examples:\n\n"
+    print("Invalid argument(s). Usage examples:\n\n"
     "Normal Mode:\n"
     "/> CVCFU.py pathToCMLFile\n\n"
-    "Verbose Mode:\n"
+    "Verbose Mode (outputs current and new dial combinations):\n"
     "/> CVCFU.py pathToCMLFile -v\n\n"
-    "If there is any whitespace in the filepath, enclose it in double quotes."
-    "\nVerbose mode outputs the current and new combinations to the screen.\n\n"
+    "If there is any whitespace in the filepath, enclose it in double quotes.\n\n"
+    #"Verbose mode outputs the current and new combinations to the screen.\n"
+    "WARNING:\nRunning CVCFU in VERBOSE mode in a shell which does not support "
+    "unicode character encoding can cause CVCFU to crash. In this case, either "
+    "use a different shell, or omit the -v argument.\n\n"
     "Press ENTER to exit.")
     exit(raw_input())
 
@@ -203,6 +209,7 @@ print "Loading CML complete.\n"
 if verbose:
     print "Current Dial Combination(s):"
     printDialCombsInTree()
+    sys.stdout.flush()
 
 # get list of each object's dial values, then build the new combinations
 print "Reading dial values from CA's DB, then building combinations, please wait...\n"
@@ -215,6 +222,8 @@ except RemotingError:
     exit(raw_input())
 
 tripleList = buildDialTupleList(dialValues)
+#tripleList = sorted(tripleList)
+combsList = buildCombs()
 setCombsInET(buildCombs())
 
 if verbose:
@@ -223,4 +232,5 @@ if verbose:
 
 tree.write(filePath)
 print "Update completed successfully.\n\nPress ENTER to exit."
+sys.stdout.flush()
 exit(raw_input())

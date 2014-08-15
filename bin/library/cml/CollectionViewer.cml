@@ -45,11 +45,10 @@
 	<Include src="library/cml/ImageViewer.cml"/>
 	<Include src="library/cml/ImageAudioViewer.cml"/>
 	<Include src="library/cml/ImageVideoViewer.cml"/>
-	<!-- <Include src="library/cml/VideoViewer.cml"/> -->
 	<Include src="library/cml/DockTemplate1080p.cml"/>
 	
 </CollectionViewer>	
 
-<StageKit displayFrameRate="true" fullscreen="true" escapeSprite="false" />
+<StageKit displayFrameRate="true" fullscreen="true" escapeSprite="false"/>
 
 </cml>

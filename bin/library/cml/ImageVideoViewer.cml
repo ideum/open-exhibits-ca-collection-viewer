@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <cml gml="library/gml/my_gestures.gml" css="library/css/module/my_styles_modules.css" simulator="false">
-	
-<ImageVideoViewer id="ivv" gestureReleaseInertia="true" image="#img1" front="#front" menu="#menu" back="#back1,#back2" background="#info-bg" timeout="999" fadeoutDuration="5" dropShadow="true" autoTextLayout="true">
+
+<!-- for the Maxwell Museum, the video timeout is set to twice the length of the longest video (used by the Collection Viewer) -->
+<ImageVideoViewer id="ivv" gestureReleaseInertia="true" image="#img1" front="#front" menu="#menu" back="#back1,#back2" background="#info-bg" timeout="660" fadeoutDuration="5" dropShadow="true" autoTextLayout="true">
 
 	<!-- holds the URL for the static visual image to be used in the Dock preview -->
 	<Text id="secondaryContentURL" text="{secondary_content}" visible="false" />
@@ -16,7 +17,7 @@
 	</TouchContainer>
 	
 	<ScrollPane id="back2" visible="false" paneStroke="0" scrollThickness="20" mouseChildren="true" targetParent="true" clusterBubbling="false">
-		<ScrollBar buttonFill="0x333333" fill="0x555555" railShape="roundRectangle" thumbFill="0x303030" cornerHeight="15" cornerWidth="15" buttonVisible="false" />
+		<ScrollBar buttonFill="0x333333" fill="0x303030" railShape="roundRectangle" thumbFill="0x555555" cornerHeight="15" cornerWidth="15" buttonVisible="false" />
 		<Text id="description" gridFitType="none" paddingLeft="20" paddingRight="20" paddingBottom="10" class="info_description" multiline="true" selectable="false" text="{work_description}" font="OpenSansBold" />
 		<GestureList>
 			<Gesture ref="n-drag" gestureOn="true" />
