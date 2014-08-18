@@ -27,7 +27,6 @@
 	<Menu id="menu" class="menu_container" alpha="0.6" position="bottom" paddingLeft="5" paddingBottom="5" paddingRight="5" autoHide="true" visible="false">
 		<Include src="library/cml/buttons/infoFlipButton.cml"/>
 		<Include src="library/cml/buttons/playButton.cml"/>
-		<Include src="library/cml/buttons/stopButton.cml"/>
 		<Include src="library/cml/buttons/closeButton.cml"/>
 	</Menu>
 	

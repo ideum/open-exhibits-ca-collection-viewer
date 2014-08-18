@@ -13,7 +13,6 @@ import os
 import re
 import time
 import sys
-#reload(sys).setdefaultencoding('utf-8')
 
 # CML backup file location
 backupDir = "_CVCFU_CML_BACKUP"
@@ -56,7 +55,6 @@ def buildCombSet(dialNumber):
     # for dial 2, we use the first and second members, for dial 3 we
     # use the second and third members
     for x in range(0, len(tripleList)):
-        #print x
         dialSet.add((tripleList[x][y], tripleList[x][z]))
 
     return buildCombStr(dialSet, dialNumber)
@@ -120,7 +118,7 @@ def checkCMLVersion():
 
 def dialResultToTriple(result):    
     '''
-    # more robust version which enforces char encoding, slow if db is large
+    # more robust version which checks char encoding, slow if db is large
     import json
     data = json.loads(json.dumps(result))
     return (data['dial1'], data['dial2'], data['dial3'])
@@ -132,13 +130,13 @@ def dialResultToTriple(result):
 # parse the CML file into an ElementTree
 def parseCML(filePath):
     try:
-        return ET.parse(filePath) #.encode('utf-16-le')
+        return ET.parse(filePath)
     except IOError:
         print("Error opening, or creating backup for: " + filePath + "\n\n"
             "Press ENTER to exit.")
         exit(raw_input())
     
-# read the mast combination record from the CA db
+# read the dial combinations from the CA db as a JSON array
 def getDialValuesFromDB():
     gateway = RemotingService("http://localhost/providence/amfphp-2.1/Amfphp/")
     service = gateway.getService("ObjectSearchTest.getalldials")
@@ -187,7 +185,6 @@ if len(sys.argv) < 2:
     "Verbose Mode (outputs current and new dial combinations):\n"
     "/> CVCFU.py pathToCMLFile -v\n\n"
     "If there is any whitespace in the filepath, enclose it in double quotes.\n\n"
-    #"Verbose mode outputs the current and new combinations to the screen.\n"
     "WARNING:\nRunning CVCFU in VERBOSE mode in a shell which does not support "
     "unicode character encoding can cause CVCFU to crash. In this case, either "
     "use a different shell, or omit the -v argument.\n\n"
@@ -222,7 +219,6 @@ except RemotingError:
     exit(raw_input())
 
 tripleList = buildDialTupleList(dialValues)
-#tripleList = sorted(tripleList)
 combsList = buildCombs()
 setCombsInET(buildCombs())
 

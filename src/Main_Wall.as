@@ -24,13 +24,25 @@ package
 		public static var OpenSansLight:Class;
 		Font.registerFont(OpenSansLight);
 		
+		[Embed(source="/../lib/wts55.ttf",fontName='SimSongLight',fontFamily='SimSongFamily',fontWeight='light',fontStyle='normal',mimeType='application/x-font-truetype',advancedAntiAliasing='true',embedAsCFF='false')]
+		public static var SimSongLight:Class;
+		Font.registerFont(SimSongLight);
+		
+		/*
+		[Embed(source="/../lib/simsun.ttf",fontName='SimSun',fontFamily='SimSun',fontWeight='light',fontStyle='normal',mimeType='application/x-font-truetype',advancedAntiAliasing='true',embedAsCFF='false')]
+		public static var SimSun:Class;
+		Font.registerFont(SimSun);
+		*/
+		
 		public function Main_Wall() 
 		{
 			super();	
 			cml = "library/cml/CollectionViewer_Wall.cml";
 			gml = "library/gml/my_gestures.gml";
 			fullscreen = true;
-		//	CMLParser.debug = true;
+			//simulator = true;
+		
+			//CMLParser.debug = true;
 			CMLParser.instance.addEventListener(CMLParser.COMPLETE, cmlInit);
 		}
 		
