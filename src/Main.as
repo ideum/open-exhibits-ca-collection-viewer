@@ -33,7 +33,7 @@ package
 		public static var SimSun:Class;
 		Font.registerFont(SimSun);
 		*/
-		
+
 		public function Main() 
 		{
 			super();
