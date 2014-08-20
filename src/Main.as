@@ -12,7 +12,7 @@ package
 	import flash.text.*;
 	import flash.utils.*;
 	
-	[SWF(width = "1920", height = "1080", backgroundColor = "0xcccccc", frameRate = "30")]
+	[SWF(width = "1440", height = "900", backgroundColor = "0xcccccc", frameRate = "30")]
 	
 	/**
 	 * Maxwell Database Collection Viewer
@@ -24,15 +24,13 @@ package
 		public static var OpenSansLight:Class;
 		Font.registerFont(OpenSansLight);
 		
-		[Embed(source="/../lib/wts55.ttf",fontName='SimSongLight',fontFamily='SimSongFamily',fontWeight='light',fontStyle='normal',mimeType='application/x-font-truetype',advancedAntiAliasing='true',embedAsCFF='false')]
+		/*[Embed(source="/../lib/wts55.ttf",fontName='SimSongLight',fontFamily='SimSongFamily',fontWeight='light',fontStyle='normal',mimeType='application/x-font-truetype',advancedAntiAliasing='true',embedAsCFF='false')]
 		public static var SimSongLight:Class;
-		Font.registerFont(SimSongLight);
+		Font.registerFont(SimSongLight);*/
 		
-		/*
-		[Embed(source="/../lib/simsun.ttf",fontName='SimSun',fontFamily='SimSun',fontWeight='light',fontStyle='normal',mimeType='application/x-font-truetype',advancedAntiAliasing='true',embedAsCFF='false')]
+		[Embed(source="/../lib/simsun.ttc",fontName='SimSun',fontFamily='SimSun',fontWeight='normal',fontStyle='normal',mimeType='application/x-font-truetype',advancedAntiAliasing='true',embedAsCFF='false')]
 		public static var SimSun:Class;
 		Font.registerFont(SimSun);
-		*/
 
 		public function Main() 
 		{
@@ -40,7 +38,7 @@ package
 			cml = "library/cml/CollectionViewer.cml";
 			gml = "library/gml/my_gestures.gml";
 			fullscreen = true;
-			//simulator = true;
+			simulator = true;
 			
 			//CMLParser.debug = true;
 			CMLParser.instance.addEventListener(CMLParser.COMPLETE, cmlInit);
