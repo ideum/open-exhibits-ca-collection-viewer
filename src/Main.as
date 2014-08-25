@@ -12,7 +12,7 @@ package
 	import flash.text.*;
 	import flash.utils.*;
 	
-	[SWF(width = "1440", height = "900", backgroundColor = "0xcccccc", frameRate = "30")]
+	[SWF(width = "1920", height = "1080", backgroundColor = "0xcccccc", frameRate = "30")]
 	
 	/**
 	 * Maxwell Database Collection Viewer
@@ -38,7 +38,7 @@ package
 			cml = "library/cml/CollectionViewer.cml";
 			gml = "library/gml/my_gestures.gml";
 			fullscreen = true;
-			simulator = true;
+			//simulator = true;
 			
 			//CMLParser.debug = true;
 			CMLParser.instance.addEventListener(CMLParser.COMPLETE, cmlInit);

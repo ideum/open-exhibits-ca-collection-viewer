@@ -49,6 +49,6 @@
 	
 </CollectionViewer>	
 
-<StageKit displayFrameRate="true" fullscreen="true" escapeSprite="false"/>
+<!--<StageKit displayFrameRate="true" fullscreen="true" escapeSprite="false"/>-->
 
 </cml>

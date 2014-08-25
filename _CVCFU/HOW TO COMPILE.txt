@@ -1,0 +1,10 @@
+Use the provided setup.py and py2exe to build a standalone exe.
+CVCFU is written for Python 2.7 and was compiled using 32 bit Python and py2exe
+
+First run the command: 
+	python setup.py install
+
+Next run the command: 
+	python setup.exe py2exe
+
+The compiled exe is located at ./dist
