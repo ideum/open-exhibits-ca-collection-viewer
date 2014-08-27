@@ -1,0 +1,3 @@
+To compile, put the installer script in a folder along with copies of the XAMPP and open-exhibits-ca-collection-viewer directories. Right click the script and click compile.
+
+See media\\Active-Projects\open-exhibits-ca-collection-viewer for the raw XAMPP directory.
