@@ -12,7 +12,7 @@
 	
 	<TouchContainer id="back1" targetParent="true" mouseChildren="false" clusterBubbling="false" visible="false">
 		<Graphic id="info-bg" class="info_bg" shape="rectangle" />
-		<Text id="title" class="info_title" gridFitType="none" text="{name}" font="OpenSansBold" />		
+		<Text id="title" class="info_title" gridFitType="none" text="{name}" wordWrap="false" font="OpenSansBold" />		
 	</TouchContainer>
 	
 	<ScrollPane id="back2" autosize="true" visible="false" paneStroke="0" scrollThickness="20" mouseChildren="true" targetParent="true" clusterBubbling="false">
