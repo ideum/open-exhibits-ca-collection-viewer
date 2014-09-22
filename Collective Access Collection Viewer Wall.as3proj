@@ -16,8 +16,8 @@
   <!-- Other classes to be compiled into your SWF -->
   <classpaths>
     <class path="src" />
-    <class path="..\gestureworks-flash-cml" />
-    <class path="..\gestureworks-flash-gml" />
+    <class path="..\..\gestureworks-flash-cml" />
+    <class path="..\..\gestureworks-flash-gml" />
   </classpaths>
   <!-- Build options -->
   <build>
